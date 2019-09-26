@@ -4,7 +4,7 @@ Bundler.require :default
 
 module Dummy
   class Application < Rails::Application
-    config.cache_classes = trueg
+    config.cache_classes = true
   end
 end
 
