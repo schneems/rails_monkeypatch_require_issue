@@ -15,26 +15,8 @@ Dummy::Application.initialize!
 module Kernel
   module_function # rubocop:disable Style/ModuleFunction
 
-  alias_method(:require_without_derailed, :require)
   def require(path)
     raise "require"
-  end
-
-  alias_method(:require_relative_without_derailed, :require_relative)
-  def require_relative(path)
-    raise "require_relative"
-  end
-
-  alias_method(:load_without_derailed, :load)
-  def load(path, wrap = false)
-    raise "load"
-  end
-end
-
-class Module
-  alias_method(:autoload_without_derailed, :autoload)
-  def autoload(const, path)
-    raise "autoload"
   end
 end
 
