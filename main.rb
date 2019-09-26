@@ -1,12 +1,10 @@
-# frozen_string_literal: true
-
 require 'bundler/setup'
 require 'rails'
 Bundler.require :default
 
 module Dummy
   class Application < Rails::Application
-    config.cache_classes = true
+    config.cache_classes = trueg
   end
 end
 
