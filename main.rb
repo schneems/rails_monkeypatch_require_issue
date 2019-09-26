@@ -42,7 +42,7 @@ begin
   require 'rake'
 rescue => e
   puts e.message
-  puts "Worked AS EXPECTED !!!!!!!!!"
+  puts "Worked AS EXPECTED !!!!!!!!!" if e.message == "require"
 else
   raise "Did not work, expected an exception from our monkeypatch"
 end

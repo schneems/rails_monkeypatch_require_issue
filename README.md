@@ -15,27 +15,15 @@ Correct behavior desired:
 
 ```
 $ bundle exec ruby main.rb
-config.eager_load is set to nil. Please update your config/environments/*.rb files accordingly:
-
-  * development - set it to false
-  * test - set it to false (unless you use a tool that preloads your test environment)
-  * production - set it to true
-
-require
+# ...
 Worked AS EXPECTED !!!!!!!!!
 ```
 
 What you will actually see:
 
 ```
-$ be ruby main.rb
-config.eager_load is set to nil. Please update your config/environments/*.rb files accordingly:
-
-  * development - set it to false
-  * test - set it to false (unless you use a tool that preloads your test environment)
-  * production - set it to true
-
-Traceback (most recent call last):
+$ bundle exec ruby main.rb
+# ...
 main.rb:47:in `<main>': Did not work, expected an exception from our monkeypatch (RuntimeError)
 ```
 
